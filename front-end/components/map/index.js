@@ -9,7 +9,7 @@ const center = {
   lat: 11.0859383, // Updated latitude
   lng: 77.6630683, // Updated longitude
 };
-const api=NEXT_PUBLIC_MAP_KEY
+const api=process.env.NEXT_PUBLIC_MAP_KEY
 const GoogleMapComponent = () => {
   return (
     <LoadScript googleMapsApiKey={api}>
