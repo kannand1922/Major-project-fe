@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X, Send } from 'lucide-react';
 
 const SQLGeminiChatBot = ({ 
-  geminiApiKey="",
+  geminiApiKey="AIzaSyC_7f-RaoQxrE18hjiXdlCxkNHDrUJgKc0",
   sqlFilePath = "C://Users//91866//OneDrive//Documents//dumps//DumpMajorProject.sql"
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -74,7 +74,7 @@ const SQLGeminiChatBot = ({
       };
   
       const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${geminiApiKey}`,
+        `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${geminiApiKey}`,
         {
           method: 'POST',
           headers: {

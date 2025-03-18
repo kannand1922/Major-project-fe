@@ -86,7 +86,26 @@ export const updateCartItem = async ({ categoryId,productId, action }) => {
     }
   };
   
-
+  export const fetchProduct = async (name,id) => {
+    try {
+      const response = await axiosInstance.get(`/admin/products/${name}/${id}`);
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching addresses:", error);
+      throw error;
+    }
+  };
+  
+  export const submitReview = async (data) => {
+    try {
+      const response = await axiosInstance.post(`/user/review`,data);
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching addresses:", error);
+      throw error;
+    }
+  };
+  
 
   export const createOrder = async (orderData) => {
     try {
